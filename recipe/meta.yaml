@@ -29,12 +29,12 @@ requirements:
   host:
     - vetoperf >=3.0.0
     - omicron >=3.1.0
-    - gwollum >=3.1.0 
+    - gwollum >=3.1.0
     - root_base
   run:
     - vetoperf >=3.0.0
     - omicron >=3.1.0
-    - gwollum >=3.1.0 
+    - gwollum >=3.1.0
     - root_base
 
 test:
