@@ -27,14 +27,14 @@ requirements:
     - root_base  # [build_platform != target_platform]
     - sysroot_linux-64 2.17  # [linux64]
   host:
-    - vetoperf >=3.0.0
-    - omicron >=3.1.0
-    - gwollum >=3.1.0
+    - vetoperf >=3.2.0
+    - omicron >=4.0.0
+    - gwollum >=4.0.0
     - root_base
   run:
-    - vetoperf >=3.0.0
-    - omicron >=3.1.0
-    - gwollum >=3.1.0
+    - vetoperf >=3.2.0
+    - omicron >=4.0.0
+    - gwollum >=4.0.0
     - root_base
 
 test:
