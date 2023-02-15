@@ -1,5 +1,5 @@
 {% set name = "UPV" %}
-{% set version = "3.0.0" %}
+{% set version = "3.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://git.ligo.org/virgo/virgoapp/{{ name }}/-/archive/{{ version }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ee50a39f55f4c227eff2a0947f4ed5e996bedefc0b7ea1f21f1193a351e067a7
+  sha256: d6fb19e30498196fd2c187d2ba92eb613586f954d415ce9f71e4a20cbf23bfbf
   patches:
     # use rootcling from build env when cross-compiling
     - rootcling-cross.patch  # [build_platform != target_platform]
@@ -15,7 +15,7 @@ source:
 build:
   error_overdepending: true
   error_overlinking: true
-  number: 6
+  number: 0
   skip: true  # [win]
 
 requirements:
@@ -27,14 +27,14 @@ requirements:
     - root_base  # [build_platform != target_platform]
     - sysroot_linux-64 2.17  # [linux64]
   host:
-    - vetoperf >=3.0.0
-    - omicron >=3.1.0
-    - gwollum >=3.1.0
+    - vetoperf >=3.2.0
+    - omicron >=4.0.0
+    - gwollum >=4.0.0
     - root_base
   run:
-    - vetoperf >=3.0.0
-    - omicron >=3.1.0
-    - gwollum >=3.1.0
+    - vetoperf >=3.2.0
+    - omicron >=4.0.0
+    - gwollum >=4.0.0
     - root_base
 
 test:
