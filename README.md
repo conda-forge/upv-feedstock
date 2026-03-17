@@ -31,17 +31,17 @@ Current build status
         <table>
           <thead><tr><th>Variant</th><th>Status</th></tr></thead>
           <tbody><tr>
-              <td>linux_64_root_base6.34.10</td>
+              <td>linux_64_root_base6.36.8</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15095&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/upv-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_root_base6.34.10" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/upv-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_root_base6.36.8" alt="variant">
                 </a>
               </td>
             </tr><tr>
-              <td>linux_64_root_base6.36.04</td>
+              <td>linux_64_root_base6.38.0</td>
               <td>
                 <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15095&branchName=main">
-                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/upv-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_root_base6.36.04" alt="variant">
+                  <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/upv-feedstock?branchName=main&jobName=linux&configuration=linux%20linux_64_root_base6.38.0" alt="variant">
                 </a>
               </td>
             </tr>
