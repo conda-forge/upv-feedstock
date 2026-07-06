@@ -15,7 +15,7 @@ source:
 build:
   error_overdepending: true
   error_overlinking: true
-  number: 11
+  number: 12
   skip: true  # [not linux]
 
 requirements:
