@@ -36,6 +36,7 @@ requirements:
     - gwollum >=4.0.0
     - omicron >=4.0.0
     - root_base
+    - root_cxx_standard
     - vetoperf >=3.2.0
   run:
     - gwollum >=4.0.0
