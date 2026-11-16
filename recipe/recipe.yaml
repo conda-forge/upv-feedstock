@@ -1,0 +1,65 @@
+schema_version: 1
+
+context:
+  version: "3.2.0"
+
+package:
+  name: upv
+  version: ${{ version }}
+
+source:
+  url: https://git.ligo.org/virgo/virgoapp/UPV/-/archive/${{ version }}/UPV-${{ version }}.tar.gz
+  sha256: d6fb19e30498196fd2c187d2ba92eb613586f954d415ce9f71e4a20cbf23bfbf
+  patches:
+    # use rootcling from build env when cross-compiling
+    - if: build_platform != target_platform
+      then: rootcling-cross.patch
+
+build:
+  dynamic_linking:
+    overdepending_behavior: error
+  number: 13
+  skip:
+    - not linux
+
+requirements:
+  build:
+    - ${{ compiler('cxx') }}
+    - ${{ stdlib('c') }}
+    - cmake >=3.12.0
+    - make
+    - pkgconf
+    - if: build_platform != target_platform
+      then:
+        - root_base
+  host:
+    - gwollum >=4.0.0
+    - omicron >=4.0.0
+    - root_base
+    - vetoperf >=3.2.0
+  run:
+    - gwollum >=4.0.0
+    - omicron >=4.0.0
+    - root_base
+    - vetoperf >=3.2.0
+
+tests:
+  - requirements:
+      run:
+        - pkg-config
+    script:
+      - upv version
+      - pkg-config --print-errors --exact-version ${{ version }} upv
+
+about:
+  license: GPL-3.0-or-later
+  license_file: LICENSE
+  summary: UPV is a software analysis tool designed to measure noise correlations for gravitational-wave detectors and to produce optimal time-domain vetoes.
+  homepage: https://virgo.docs.ligo.org/virgoapp/UPV/
+  repository: https://git.ligo.org/virgo/virgoapp/UPV.git
+  documentation: https://virgo.docs.ligo.org/virgoapp/UPV/
+
+extra:
+  recipe-maintainers:
+    - duncanmmacleod
+    - FlorentRobinet
